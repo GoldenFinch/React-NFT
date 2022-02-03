@@ -10,7 +10,7 @@ function App() {
   const [activePunk, setActivePunk] = useState({})
 
   useEffect(() => {
-    axios.get('https://testnets-api.opensea.io/assets?asset_contract_address=0xa933c3c479228EAAB4d9ab044903e1bB726D0A2b&order_direction=asc')
+    axios.get('/api/assets?asset_contract_address=0xa933c3c479228EAAB4d9ab044903e1bB726D0A2b&order_direction=asc')
     .then(response => {
       setPunkList(response.data.assets)
       setActivePunk(response.data.assets[0])
